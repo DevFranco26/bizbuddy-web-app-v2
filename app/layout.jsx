@@ -1,8 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import {
-  ClerkProvider,
-} from '@clerk/nextjs'
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
   title: "BizBuddy",
@@ -12,7 +10,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-     <>
       <html lang="en" suppressHydrationWarning>
         <head />
         <body>
@@ -26,7 +23,6 @@ export default function RootLayout({ children }) {
           </ThemeProvider>
         </body>
       </html>
-    </>
     </ClerkProvider>
   );
 }
