@@ -48,7 +48,7 @@ function Contact() {
       <div className="flex flex-col justify-center items-center w-full mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
           <motion.div variants={itemVariants} className="w-full">
-            <Card className="dark:bg-black border-gray-400 dark:border-neutral-700 rounded-3xl h-full">
+            <Card className="dark:bg-black border border-gray-400/60 dark:border-neutral-700/60 rounded-3xl p-2 h-full">
               <CardHeader>
                 <h3 className="text-xl sm:text-2xl font-bold">
                   Contact Details
@@ -76,7 +76,7 @@ function Contact() {
           </motion.div>
 
           <motion.div variants={itemVariants} className="w-full">
-            <Card className="dark:bg-black border-gray-400 dark:border-neutral-700 rounded-3xl h-full">
+            <Card className="dark:bg-black border border-gray-400/60 dark:border-neutral-700/60 rounded-3xl p-2 h-full">
               <CardHeader>
                 <h3 className="text-xl sm:text-2xl font-bold">
                   Leave a Message
@@ -91,7 +91,7 @@ function Contact() {
                     <Input
                       id="name"
                       placeholder="Enter your name"
-                      className="border border-gray-400 dark:border-neutral-700"
+                      className="border border-gray-400/60 dark:border-neutral-700/60 rounded-3xl p-2 pl-3"
                     />
                   </div>
 
@@ -103,7 +103,7 @@ function Contact() {
                       id="email"
                       placeholder="Enter your email"
                       type="email"
-                      className="border border-gray-400 dark:border-neutral-700"
+                      className="border border-gray-400/60 dark:border-neutral-700/60 rounded-3xl p-2 pl-3"
                     />
                   </div>
 
@@ -114,7 +114,7 @@ function Contact() {
                     <Textarea
                       id="message"
                       placeholder="Enter your message"
-                      className="min-h-[100px] border border-gray-400 dark:border-neutral-700"
+                      className="min-h-[100px] border border-gray-400/60 dark:border-neutral-700/60 rounded-lg p-2 pl-3"
                     />
                   </div>
 

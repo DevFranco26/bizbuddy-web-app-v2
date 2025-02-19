@@ -31,7 +31,7 @@ const itemVariants = {
 export default function FeaturesIcon() {
   return (
     <>
-      <div className="w-full overflow-x-auto px-4 py-16 text-gray-50 scrollbar-hide">
+      <div className="w-full overflow-x-auto px-4 md:py-20 py-8 text-gray-50 scrollbar-hide md:mt-32 mt-10">
         <motion.div
           className="flex flex-nowrap md:flex-wrap justify-start md:justify-center items-center gap-6 md:gap-12 lg:gap-20 pb-4 md:pb-0"
           variants={containerVariants}

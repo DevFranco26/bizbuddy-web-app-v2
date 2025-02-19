@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section - Newsletter */}
-          <div className="space-y-6 border border-gray-400 dark:border-neutral-700 rounded-3xl p-2 ">
+          <div className="space-y-6 border border-gray-400/60 dark:border-neutral-700/60 rounded-3xl p-2 ">
             <div className=" p-6 rounded-xl shadow-sm">
               <h3 className=" font-bold text-2xl mb-4">
                 Subscribe to Our Newsletter
@@ -110,7 +110,7 @@ const Footer = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full p-2 text-sm pl-2 border border-gray-400 dark:border-neutral-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 dark:bg-black"
+                    className="w-full p-2 text-sm pl-3 border border-gray-400/60 dark:border-neutral-700/60 rounded-3xl focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 dark:bg-black"
                     required
                     placeholder="Enter your name"
                   />
@@ -122,7 +122,7 @@ const Footer = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full p-2 pl-2 border border-gray-400 dark:border-neutral-700 text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 dark:bg-black"
+                    className="w-full p-2 text-sm pl-3 border border-gray-400/60 dark:border-neutral-700/60 rounded-3xl focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 dark:bg-black"
                     required
                     placeholder="Enter your email"
                   />

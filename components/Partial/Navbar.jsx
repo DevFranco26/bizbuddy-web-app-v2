@@ -42,7 +42,7 @@ function SignInLink() {
   return (
     <Link
       href="/sign-in"
-      className="px-5 text-gray-100 py-1 rounded-full border-2 bg-orange-500 hover:border-orange-600 transition-colors ease-in-out font-medium"
+      className="px-5 text-gray-100 py-1 rounded-full  bg-orange-500 hover:bg-orange-600  transition-colors ease-in-out font-medium"
     >
       Sign in
     </Link>

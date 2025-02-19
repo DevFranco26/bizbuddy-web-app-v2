@@ -70,95 +70,97 @@ export default function SignInPage() {
   };
 
   return (
-    <div className="min-h-[80vh] flex  p-4 max-w-7xl mx-auto">
-      <div className="w-full p-8 rounded-3xl shadow border-t border-l border-r  mx-auto max-w-3xl text-sm tracking-wider">
-        <h2 className="text-lg font-bold mb-6 text-center">Sign In</h2>
-        {step === 1 && (
-          <form onSubmit={handleNext} className="space-y-4">
-            <div>
-              <label className="block mb-1">Email:</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full p-2 rounded border bg-transparent"
-                required
-              />
-            </div>
-            <div>
-              <label className="block mb-1">Password:</label>
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                className="w-full p-2 rounded border bg-transparent"
-                required
-              />
-            </div>
-            <div className="h-[8vh] pt-6">
-              <button
-                type="submit"
-                disabled={loading}
-                className={`w-full px-4 py-2 rounded bg-orange-600 text-white hover:bg-orange-700 transition-colors flex items-center justify-center ${
-                  loading ? "opacity-70 cursor-not-allowed" : ""
-                }`}
-              >
-                Next
-                {loading && <Loader2 className="ml-2 h-4 w-4 animate-spin" />}
-              </button>
-              {error && (
-                <div className="mb-4 text-sm text-center py-2 text-red-500 rounded">
-                  {error}
-                </div>
-              )}
-            </div>
-            <div className=" mt-10 text-right">
-              <p className="text-xs">Don't have an account?</p>
-              <button
-                onClick={() => router.push("/sign-up")}
-                className="mt-1 underline text-orange-500 hover:text-orange-700"
-              >
-                Create one here
-              </button>
-            </div>
-          </form>
-        )}
-        {step === 2 && (
-          <div className="space-y-4">
-            {error && (
-              <div className="mb-4 p-2 text-white bg-red-500 border border-red-500 rounded">
-                {error}
+    <div className="h-screen w-full flex flex-col justify-between items-center ">
+      <div className=" flex  p-4 max-w-7xl mx-auto">
+        <div className="w-full p-8 rounded-3xl shadow border-t border-l border-r  mx-auto max-w-3xl text-sm tracking-wider">
+          <h2 className="text-lg font-bold mb-6 text-center">Sign In</h2>
+          {step === 1 && (
+            <form onSubmit={handleNext} className="space-y-4">
+              <div>
+                <label className="block mb-1">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full p-2 rounded border bg-transparent"
+                  required
+                />
               </div>
-            )}
-            <p className="mb-2 text-center">Select a company to continue:</p>
-            {users.map((u) => {
-              const compName = u.company?.name || "No Name";
-              const isLoading = loadingCompanyId === u.companyId;
-              return (
+              <div>
+                <label className="block mb-1">Password:</label>
+                <input
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  className="w-full p-2 rounded border bg-transparent"
+                  required
+                />
+              </div>
+              <div className="h-[8vh] pt-6">
                 <button
-                  key={u.companyId}
-                  onClick={() => handleCompanySelect(u.companyId)}
+                  type="submit"
                   disabled={loading}
-                  className={`w-full px-4 py-2 rounded bg-orange-600 text-white hover:bg-orange-700 transition-colors flex items-center justify-between ${
+                  className={`w-full px-4 py-2 rounded bg-orange-600 text-white hover:bg-orange-700 transition-colors flex items-center justify-center ${
                     loading ? "opacity-70 cursor-not-allowed" : ""
                   }`}
                 >
-                  <span>{compName}</span>
-                  {isLoading && (
-                    <Loader2 className="ml-2 h-4 w-4 animate-spin" />
-                  )}
-                  <span>
-                    {u.username}({u.role})
-                  </span>
+                  Next
+                  {loading && <Loader2 className="ml-2 h-4 w-4 animate-spin" />}
                 </button>
-              );
-            })}
-          </div>
-        )}
+                {error && (
+                  <div className="mb-4 text-sm text-center py-2 text-red-500 rounded">
+                    {error}
+                  </div>
+                )}
+              </div>
+              <div className=" mt-10 text-right">
+                <p className="text-xs">Don't have an account?</p>
+                <button
+                  onClick={() => router.push("/sign-up")}
+                  className="mt-1 underline text-orange-500 hover:text-orange-700"
+                >
+                  Create one here
+                </button>
+              </div>
+            </form>
+          )}
+          {step === 2 && (
+            <div className="space-y-4">
+              {error && (
+                <div className="mb-4 p-2 text-white bg-red-500 border border-red-500 rounded">
+                  {error}
+                </div>
+              )}
+              <p className="mb-2 text-center">Select a company to continue:</p>
+              {users.map((u) => {
+                const compName = u.company?.name || "No Name";
+                const isLoading = loadingCompanyId === u.companyId;
+                return (
+                  <button
+                    key={u.companyId}
+                    onClick={() => handleCompanySelect(u.companyId)}
+                    disabled={loading}
+                    className={`w-full px-4 py-2 rounded bg-orange-600 text-white hover:bg-orange-700 transition-colors flex items-center justify-between ${
+                      loading ? "opacity-70 cursor-not-allowed" : ""
+                    }`}
+                  >
+                    <span>{compName}</span>
+                    {isLoading && (
+                      <Loader2 className="ml-2 h-4 w-4 animate-spin" />
+                    )}
+                    <span>
+                      {u.username}({u.role})
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
