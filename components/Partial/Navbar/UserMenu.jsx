@@ -17,10 +17,19 @@ export default function UserMenu() {
   const initials = `${firstInitial}${lastInitial}`.toUpperCase() || "?";
 
   return (
-    <div className="relative">
+    <div className="relative pl-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 rounded-lg  flex items-center justify-center text-sm font-semibold focus:outline-none hover:dark:bg-gray-700 hover:bg-gray-200"
+        className={`
+          w-10 h-10 flex items-center justify-center text-sm font-semibold 
+          focus:outline-none border-2  rounded-full transition-colors
+          ${
+            isOpen
+              ? "text-orange-500 border-orange-500 border-2"
+              : "border-2 border-gray-800 dark:border-gray-400"
+          } 
+          hover:text-orange-500 hover:border-orange-500
+        `}
       >
         {initials}
       </button>
@@ -34,7 +43,7 @@ export default function UserMenu() {
         leaveTo="opacity-0 scale-95"
       >
         <div className="absolute right-0 mt-2 w-56 origin-top-right bg-white dark:bg-black border rounded-md shadow-lg z-10">
-          <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700">
+          <div className="px-4 py-2 border-b ">
             <p className="text-sm font-semibold text-gray-800 dark:text-gray-100">
               {user.profile?.firstName || user.firstName}{" "}
               {user.profile?.lastName || user.lastName}
@@ -49,7 +58,7 @@ export default function UserMenu() {
                 logout();
                 setIsOpen(false);
               }}
-              className="mt-2 block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="mt-2 block w-full text-left px-4 py-2 text-sm "
             >
               Sign Out
             </button>

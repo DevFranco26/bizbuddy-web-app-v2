@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import useAuthStore from "@/store/useAuthStore";
+import Footer from "@/components/Partial/Footer";
 
 export default function SignInPage() {
   const router = useRouter();
@@ -157,6 +158,7 @@ export default function SignInPage() {
           </div>
         )}
       </div>
+      {/* <Footer /> */}
     </div>
   );
 }

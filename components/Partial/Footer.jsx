@@ -1,4 +1,4 @@
-// biz-web-app/components/Partial/Navbar.jsx
+// biz-web-app/components/Partial/Footer.jsx
 
 "use client";
 
