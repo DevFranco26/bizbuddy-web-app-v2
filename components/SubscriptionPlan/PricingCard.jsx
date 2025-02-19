@@ -1,4 +1,4 @@
-// biz-web-app/components/PricingCard.jsx
+// biz-web-app/components/SubscriptionPlan/PricingCard.jsx
 
 export default function PricingCard({ plan, onSelect }) {
   return (

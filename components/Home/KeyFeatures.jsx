@@ -1,4 +1,4 @@
-// biz-web-app/components/Dashboard/KeyFeatures.jsx
+// biz-web-app/components/Home/KeyFeatures.jsx
 
 "use client";
 
@@ -46,15 +46,15 @@ function KeyFeatures() {
 
   return (
     <motion.div
-      className="w-full py-2 md:py-16 px-4 sm:px-6 lg:px-8 my-28"
+      className="w-full py-2 md:py-14 px-4 sm:px-6 lg:px-8 lg:py-28 lg:my-6 "
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <motion.div className="mb-8" variants={itemVariants}>
-        <p className="text-center border-b border-gray-400 pb-2 max-w-7xl mx-auto text-2xl sm:text-3xl lg:text-4xl ">
+        <h2 className="text-center border-b border-gray-400 pb-2 max-w-7xl mx-auto text-xl sm:text-2xl md:text-3xl lg:text-4xl capitalize ">
           Key Features
-        </p>
+        </h2>
       </motion.div>
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center">
         <motion.div
@@ -75,7 +75,7 @@ function KeyFeatures() {
             />
           </AnimatePresence>
         </motion.div>
-        <div className="w-full lg:w-3/5 flex flex-col items-start lg:h-[60vh]">
+        <div className="w-full lg:w-3/5 flex flex-col items-start justify-center  ">
           <motion.div
             className="flex flex-wrap justify-center w-full gap-4 sm:gap-6 lg:gap-8 items-center p-2"
             variants={itemVariants}
@@ -105,7 +105,7 @@ function KeyFeatures() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeFeature}
-              className="mt-6 p-4 rounded-xl w-full"
+              className="p-4 rounded-xl w-full mt-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}

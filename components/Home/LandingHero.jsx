@@ -44,7 +44,7 @@ export default function LandingHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="text-sm md:text-base text-black"
+            className=" text-base md:text-lg text-black font-medium"
           >
             <span className="text-white">Bizbuddy</span> is accessible on Google
             Play, Appstore, Windows, Mac, and Web. Track time effortlessly
@@ -57,27 +57,27 @@ export default function LandingHero() {
           transition={{ delay: 1, duration: 0.6 }}
           className="text-base md:text-lg text-black font-medium"
         >
-          Download <span className="text-white">Bizbuddy</span> for free
+          Download <span className="text-white">Bizbuddy</span> for free!
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="flex md:gap-4 gap-0 -mx-3"
+          className="flex md:gap-4 gap-0 "
         >
           <Image
             src="/download-app-store.png"
             alt="download app store"
             width={160}
             height={48}
-            className="w-32 md:w-40"
+            className="w-44 sm:w-48 hover:scale-105 transition-transform cursor-pointer"
           />
           <Image
             src="/download-google-play.png"
             alt="download google play"
             width={160}
             height={48}
-            className="w-32 md:w-40"
+            className="w-44 sm:w-48 hover:scale-105 transition-transform cursor-pointer"
           />
         </motion.div>
       </motion.div>
@@ -86,7 +86,7 @@ export default function LandingHero() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-        className="w-full md:w-1/2 flex justify-center items-center"
+        className="w-full md:w-1/2 flex justify-center items-center md:mt-0 mt-10"
       >
         <motion.div
           initial={{ y: 20 }}
@@ -98,11 +98,11 @@ export default function LandingHero() {
           }}
         >
           <Image
-            src="/hand-phone.png"
+            src="/landing-hero-image.png"
             alt="Devices"
             width={500}
             height={500}
-            className="w-full h-auto object-contain"
+            className="w-[100%] h-auto object-contain"
           />
         </motion.div>
       </motion.div>

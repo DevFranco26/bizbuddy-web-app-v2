@@ -1,15 +1,15 @@
 // File: biz-web-app/app/page.jsx
 
 "use client";
-import LandingHero from "@/components/Dashboard/LandingHero";
-import FeaturesIcon from "@/components/Dashboard/FeaturesIcon";
-import KeyFeatures from "@/components/Dashboard/KeyFeatures";
-import Testimonials from "@/components/Dashboard/Testimonials";
-import DataDisplay from "@/components/Dashboard/DataDisplay";
-import TrustedPartners from "@/components/Dashboard/TrustedPartners";
-import Contact from "@/components/Dashboard/Contact";
-import Accordion from "@/components/Dashboard/Accordion";
-import Footer from "@/components/Footer";
+import LandingHero from "@/components/Home/LandingHero";
+import FeaturesIcon from "@/components/Home/FeaturesIcon";
+import KeyFeatures from "@/components/Home/KeyFeatures";
+import Testimonials from "@/components/Home/Testimonials";
+import DataDisplay from "@/components/Home/DataDisplay";
+import TrustedPartners from "@/components/Home/TrustedPartners";
+import Contact from "@/components/Home/Contact";
+import Accordion from "@/components/Home/Accordion";
+import Footer from "@/components/Partial/Footer";
 
 export default function Home() {
   return (

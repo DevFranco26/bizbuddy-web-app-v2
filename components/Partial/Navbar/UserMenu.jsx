@@ -1,4 +1,4 @@
-// File: biz-web-app/components/UserMenu.jsx
+// biz-web-app/components/Partial/Navbar/UserMenu.jsx
 
 "use client";
 

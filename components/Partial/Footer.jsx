@@ -1,4 +1,6 @@
-// biz-web-app/components/Dashboard/Footer.jsx
+// biz-web-app/components/Partial/Navbar.jsx
+
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -11,6 +13,8 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+// 1) Import motion from framer-motion
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const handleSubmit = (e) => {
@@ -19,12 +23,15 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full shadow-lg px-3">
+    // 2) Replace <footer> with <motion.footer> to add animation
+    <motion.footer
+      className="w-full shadow-lg px-3"
+      // 3) Simple fade/slide in on mount
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* 
-          Added 'items-start' to ensure all three columns align at the top.
-          No other changes made.
-        */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 items-center justify-center">
           {/* Left Section */}
           <div className="space-y-6">
@@ -90,9 +97,9 @@ const Footer = () => {
           </div>
 
           {/* Right Section - Newsletter */}
-          <div className="space-y-6 border rounded-3xl p-2 ">
+          <div className="space-y-6 border border-gray-400 dark:border-neutral-700 rounded-3xl p-2 ">
             <div className=" p-6 rounded-xl shadow-sm">
-              <h3 className=" font-semibold text-lg mb-4">
+              <h3 className=" font-bold text-2xl mb-4">
                 Subscribe to Our Newsletter
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -103,7 +110,7 @@ const Footer = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full p-2.5 border  rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200"
+                    className="w-full p-2 text-sm pl-2 border border-gray-400 dark:border-neutral-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 dark:bg-black"
                     required
                     placeholder="Enter your name"
                   />
@@ -115,14 +122,14 @@ const Footer = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full p-2.5 border  rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200"
+                    className="w-full p-2 pl-2 border border-gray-400 dark:border-neutral-700 text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 dark:bg-black"
                     required
                     placeholder="Enter your email"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 text-white px-6 py-2.5 rounded-lg hover:bg-orange-600  transition-all duration-200 font-medium"
+                  className=" bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600  font-medium"
                 >
                   Subscribe
                 </button>
@@ -141,7 +148,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

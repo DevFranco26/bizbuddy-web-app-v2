@@ -1,4 +1,5 @@
-// File: biz-web-app/app/(auth)/payment/page.jsx
+// File: biz-web-app/app/payment/page.jsx
+
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";

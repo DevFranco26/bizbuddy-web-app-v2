@@ -1,4 +1,4 @@
-// biz-web-app/components/Dashboard/FeaturesIcon.jsx
+// biz-web-app/components/Home/FeaturesIcon.jsx
 
 "use client";
 
@@ -31,7 +31,7 @@ const itemVariants = {
 export default function FeaturesIcon() {
   return (
     <>
-      <div className="w-full overflow-x-auto px-4 py-16 text-gray-50 dark:text-gray-950 scrollbar-hide ">
+      <div className="w-full overflow-x-auto px-4 py-16 text-gray-50 scrollbar-hide">
         <motion.div
           className="flex flex-nowrap md:flex-wrap justify-start md:justify-center items-center gap-6 md:gap-12 lg:gap-20 pb-4 md:pb-0"
           variants={containerVariants}
@@ -44,7 +44,7 @@ export default function FeaturesIcon() {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.5 }}
-              className="flex-shrink-0 w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 p-4 rounded-3xl bg-orange-500 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-center items-center group"
+              className="flex-shrink-0 w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 p-4 rounded-3xl bg-gradient-to-r from-orange-400 to-red-600 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-center items-center group"
             >
               <motion.div
                 whileHover={{ rotate: 360 }}

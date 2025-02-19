@@ -1,3 +1,5 @@
+// File: biz-web-app/app/dashboard/page.jsx
+
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";

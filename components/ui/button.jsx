@@ -22,6 +22,7 @@ const buttonVariants = cva(
     defaultVariants: {
       variant: "default",
       size: "default",
+      brand: "bg-blue-500 text-white hover:bg-blue-600",
     },
   }
 );
